@@ -1,0 +1,25 @@
+const Menu = ({ menu }) => {
+    return (
+        <div className="section-center">
+            {
+                menu.map((item) => {
+                    const { id, title, img, desc,price } = item;
+                    return (
+                        <article className="menu-item">
+                            {/* <h2>This is menu component</h2> */}
+                            <img src={img} alt={title} className="photo" />
+                            <div className="item-info">
+                                <header>
+                                    <h4>{title}</h4>
+                                    <h4 className="price">${price}</h4>
+                                </header>
+                                <p className="item-text">{desc}</p>
+                            </div>
+                        </article>
+                )
+            })
+        }
+        </div>
+    )
+}
+export default Menu
